@@ -22,6 +22,13 @@ def run_bot():
 root = ThemedTk(theme="radiance")
 root.title("Web Scraping Bot Interface")
 
+# Load the background image
+background_image = PhotoImage(file="background_image1.jpg")
+
+# Set the background image
+background_label = Label(root, image=background_image)
+background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
 # Create a ThemedStyle object
 style = ttk.Style()
 
@@ -46,5 +53,3 @@ ttk.Button(root, text="Run Bot", command=run_bot, style="TButton").grid(row=1, c
 
 # Run the main event loop
 root.mainloop()
-
-
